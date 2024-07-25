@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EJ_</RootNamespace>
-    <AssemblyName>ELJ-PageSetupImport</AssemblyName>
+    <AssemblyName>EJ_PageSetupImport</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -25,7 +25,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>EJ_PageSetupImport.bundle\Contents\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -80,6 +80,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="EJ_PageSetupImport.bundle\Contents\EJ_PageSetupImport.cuix" />
+    <None Include="EJ_PageSetupImport.bundle\Contents\EJ_PageSetupImport.dll.config" />
+    <None Include="EJ_PageSetupImport.bundle\Contents\EJ_PageSetupImport.mnr" />
+    <None Include="EJ_PageSetupImport.bundle\Contents\EJ_PageSetupImport_light.mnr" />
+    <None Include="EJ_PageSetupImport.bundle\Contents\start.scr" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,5 +100,11 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="EJ_PageSetupImport.bundle\Contents\EJ_PageSetupImport.dll" />
+    <Content Include="EJ_PageSetupImport.bundle\Contents\EJ_PageSetupImport.pdb" />
+    <Content Include="EJ_PageSetupImport.bundle\PackageContents.xml" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

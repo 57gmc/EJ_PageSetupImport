@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ApplicationPackage  
+    SchemaVersion="1.0"
+    Name="EJ_PageSetupImport"
+    Description="Utility for importing page setups into current drawing."
+    Author="Ed Jobe"  
+    AppVersion="2020.0.0.1" 
+    ProductCode="{7d1044ab-b1ef-4ccc-b441-023ba4f3a697}"
+    Helpfile="">
+  <CompanyDetails
+    Name="Ed Jobe Software"
+    URL=""
+    Email="edljobe@hotmail.com">    
+  </CompanyDetails>
+  <Components>
+    <RuntimeRequirements
+      OS="Win64"
+      Platform="AutoCAD*|AutoCAD"
+      SeriesMin="R20.0"
+      SeriesMax="R24.2">  
+    </RuntimeRequirements>
+    <ComponentEntry
+      AppName="EJ_PageSetupImport"
+      MouduleName="./Contents/EJ_PageSetupImport.dll"   
+      LoadOnAutoCADStartup="True" 
+      LoadOnCommandInvocation="False">  
+      <Commands>
+		<Command Local="ImportPageSetupsConfig" Global="ImportPageSetupsConfig"/>
+		<Command Local="ImportPageSetupsND" Global="ImportPageSetupsND"/>
+	  </Commands>
+    </ComponentEntry>
+	<ComponentEntry
+      AppName="EJ_PageSetupImport CUIX"
+      ModuleName="./Contents/EJ_PageSetupImport.cuix"
+      LoadOnAutoCADStartup="True" 
+      LoadOnCommandInvocation="False">
+    </ComponentEntry>
+  </Components>
+</ApplicationPackage>

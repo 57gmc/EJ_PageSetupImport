@@ -50,7 +50,7 @@ namespace EJ_
         /// is used in this command. Besides importing page setups, named views needed for plotting
         /// are also imported.
         /// </summary>
-        [CommandMethod("EJ", "EJImportPageSetupsND", CommandFlags.Modal)]
+        [CommandMethod("EJ", "ImportPageSetupsND", CommandFlags.Modal)]
         public void ImportPageSetupsND()
         {
             try
@@ -153,7 +153,7 @@ namespace EJ_
         /// <summary>
         /// Configures setup for the ImportPageSetupsND command.
         /// </summary>
-        [CommandMethod("EJ", "EJImportPageSetupsConfig", CommandFlags.Modal)]
+        [CommandMethod("EJ", "ImportPageSetupsConfig", CommandFlags.Modal)]
         public void ImportPageSetupsConfig()
         {
             acWin.OpenFileDialog fb = new acWin.OpenFileDialog("Select a File to import page setups from.",
