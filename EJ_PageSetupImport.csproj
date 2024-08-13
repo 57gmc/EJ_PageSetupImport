@@ -103,6 +103,7 @@
   <ItemGroup>
     <Content Include="EJ_PageSetupImport.bundle\Contents\EJ_PageSetupImport.dll" />
     <Content Include="EJ_PageSetupImport.bundle\Contents\EJ_PageSetupImport.pdb" />
+    <Content Include="EJ_PageSetupImport.bundle\Contents\PageSetupImportHelp.html" />
     <Content Include="EJ_PageSetupImport.bundle\PackageContents.xml" />
   </ItemGroup>
   <ItemGroup />

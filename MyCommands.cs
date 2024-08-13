@@ -138,12 +138,12 @@ namespace EJ_
                 }
                 else
                 {
-                    MessageBox.Show("You must first run the EJImportPageSetupsConfig command.", "EJImportPageSetupsND", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("You must first run the ImportPageSetupsConfig command.", "ImportPageSetupsND", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Autodesk.AutoCAD.Runtime.Exception ex)
             {
-                MessageBox.Show("Error Occured in EJImportPageSetupsND command. " + ex.Message + ", " + ex.HelpLink, "EJImportPageSetupsND Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Occured in ImportPageSetupsND command. " + ex.Message + ", " + ex.HelpLink, "ImportPageSetupsND Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             };
 
