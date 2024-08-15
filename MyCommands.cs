@@ -70,7 +70,7 @@ namespace EJ_
                     {
                         // delete existing page setups
                         DBDictionary destDict = destTrans.GetObject(destDb.PlotSettingsDictionaryId, OpenMode.ForWrite) as DBDictionary;
-                        foreach (DictionaryEntry de in destDict)
+                        foreach (DBDictionaryEntry de in destDict)
                         {
                             PlotSettings plotSettings = destTrans.GetObject((ObjectId)(de.Value), OpenMode.ForWrite) as PlotSettings;
                             plotSettings.Erase();
@@ -93,7 +93,7 @@ namespace EJ_
                             // import template page setups
                             // Importing page setups also brings in referenced views.
                             DBDictionary sourceDict = sourceTrans.GetObject(sourceDb.PlotSettingsDictionaryId, OpenMode.ForRead) as DBDictionary;
-                            foreach (DictionaryEntry de in sourceDict)
+                            foreach (DBDictionaryEntry de in sourceDict)
                             {
                                 PlotSettings SourcePlotSettings = sourceTrans.GetObject((ObjectId)(de.Value), OpenMode.ForRead) as PlotSettings;
                                 PlotSettings tempPlotSettings = new PlotSettings(SourcePlotSettings.ModelType);
@@ -186,7 +186,7 @@ namespace EJ_
                         using (Transaction trans = sourceDb.TransactionManager.StartTransaction())
                         {
                             DBDictionary sourceDict = trans.GetObject(sourceDb.PlotSettingsDictionaryId, OpenMode.ForRead) as DBDictionary;
-                            foreach (DictionaryEntry de in sourceDict)
+                            foreach (DBDictionaryEntry de in sourceDict)
                             {
                                 PlotSettings plotSettings = trans.GetObject((ObjectId)(de.Value), OpenMode.ForRead) as PlotSettings;
                                 // Separate MS page setups from PS page setups.
@@ -206,9 +206,11 @@ namespace EJ_
 
                         // Show Dialog with page setup names
                         // Have the user select a MS config.
-                        EJ_.Forms.PageSetups frmPageSetups = new EJ_.Forms.PageSetups();
-                        frmPageSetups.SetListItems = plotSettingsMS;
-                        frmPageSetups.SetPrompt = "Select MS page setup.";
+                        EJ_.Forms.PageSetups frmPageSetups = new EJ_.Forms.PageSetups
+                        {
+                            SetListItems = plotSettingsMS,
+                            SetPrompt = "Select MS page setup."
+                        };
                         dr = acApp.ShowModalDialog(frmPageSetups);
                         string msPageSetup = frmPageSetups.Selected;
                         if (dr == DialogResult.OK)
